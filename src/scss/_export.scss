@@ -1,0 +1,42 @@
+/* Vendor Import*/
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+@import 'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import "_mixins/media";
+@import "_mixins/selection";
+
+//----------------------------------*\
+// CONFIG & MODULES
+//----------------------------------*/
+
+// Config modules
+@import "_modules/variables";
+
+// Component modules
+@import "_modules/animation";
+@import "_modules/icon";
+@import "_modules/typography";
+@import "_modules/button";
+@import "_modules/input";
+
+// Enhancement modules
+@import "_modules/_print";
+
+//COMPONENT > BASE
+//----------------------------------*\
+@import "_components/_base/header";
+@import "_components/_base/footer";
+@import "_components/_base/app";
+
+//COMPONENT > WIDGETS
+//----------------------------------*/
+@import "_components/_widgets/_home-details/HomeDetails";
+@import "_components/_widgets/_home-details/HomeDetailsMain";
+@import "_components/_widgets/_home-page/HomeBody";
+@import "_components/_widgets/_home-page/HomeHead";
+@import "_components/_widgets/_home-page/HomePage";
+@import "_components/_widgets/_new-article/NewArticleForm"

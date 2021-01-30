@@ -1,0 +1,23 @@
+button,
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.button-main {
+    outline: none !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    border: 1px solid transparent;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    // &:hover,
+    // &:focus,
+    // &:active,
+    // &.active {
+    // }
+    &:hover i {
+        animation: shakeRight 800ms ease-out alternate;
+    }
+}

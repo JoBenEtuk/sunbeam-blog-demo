@@ -1,0 +1,30 @@
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+/* SASS Variables */
+$black: #000;
+$black1: #111;
+$black2: #20242A;
+$white: #ffffff;
+$off-white: #F3F3F3;
+$yellow: #FFDA68;
+$yellow1: #FFD540;
+$yellow2: #FF9A02;
+$red: #FF6961;
+$rose: #FF9F9F;
+$grey1: #f2f2f2;
+$gold: #FFE699;
+
+
+//Responsive Varaibles
+$breakpoints: (
+    phone: 320px,
+    phone2x: 480px,
+    phone3x: 768px,
+    tablet: 912px,
+    tablet2x: 1024px,
+    desktop: 1200px,
+    desktop2x: 1440px,
+    desktop3x: 1680px,
+);

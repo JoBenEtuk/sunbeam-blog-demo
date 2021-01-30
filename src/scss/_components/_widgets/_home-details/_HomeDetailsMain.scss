@@ -1,0 +1,40 @@
+.HomeDetailsHead {
+    margin-bottom: 3rem;
+    .HomeDetailsHeadText {
+        margin-bottom: 2rem;
+        h2 {
+            font-weight: bold;
+            font-size: 2.375rem;
+            line-height: 140%;            
+        }
+    }
+    .HomeDetailsHeadImage {
+        height: 446px;
+        border-radius: 5px;   
+        img {
+            width: 100%;
+            height: 100%;
+        }     
+    }
+    .Aside {
+        .New {
+            color: $rose;
+        }
+        .MiniHighlight {
+            background: $gold;
+            color: $black;
+        }
+    }
+}
+.HomeDetailsMain {
+    opacity: 0.6;
+    font-size: 1.125rem;
+    line-height: 180%;
+    margin-bottom: 14rem;
+    div {
+        margin-bottom: 2em;
+        .bold-text {
+            font-weight: bold
+        }
+    }
+}

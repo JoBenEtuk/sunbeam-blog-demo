@@ -1,0 +1,59 @@
+.HomeBody{
+    margin-bottom: 7rem;
+    .HomeBodyMain {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 3em;
+        margin-bottom: 5rem;
+        .Article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img {
+                height: 110px;
+                background: $off-white;
+                border-radius: 5px;
+            }
+            .ArticleHead {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 140%;
+                color: $black;
+            }
+            .ArticleBody {
+                opacity: 0.6;
+                color: $black;
+                line-height: 180%;
+            }
+            
+            .ReadMore {
+                color: $black;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .More {
+                width: 74px;
+                border-bottom: 4px $yellow1 solid;
+                z-index: -1;
+                position: relative;
+                top: -10px;
+            }
+        }
+    }
+    .LinkMore {
+        text-align: center;
+        a {
+            color: $yellow2;
+            font-weight: 700;
+            font-size: 1.125rem;
+            white-space: nowrap;
+            i {
+                font-weight: 700; 
+                position: relative;
+                top: 2px;
+            }
+        }
+    }    
+}

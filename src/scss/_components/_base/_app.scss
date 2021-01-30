@@ -1,0 +1,109 @@
+a {
+    text-decoration: none !important;
+}
+.icon-arrow-left-line{
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: $yellow2;
+}
+.Aside {
+    color: rgba($black1, 0.4);
+    width: 243px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.813rem;
+    margin-top: 14px;
+}
+.AsideDate {
+    color: rgba($black1, 0.5);
+}
+.New {
+    font-weight: bold;
+    color: $yellow2;
+}
+.MiniHighlight {
+    background: $yellow1;
+    width: 83px;
+    height: 18px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 0.625rem;
+    color: $black1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.Highlight {
+    color: #231F20 !important;
+    text-decoration: none;
+    background-color: $yellow;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 173px;
+    height: 58px;
+    span{
+        padding-left: 15px;
+        color: $black;
+        font-family: serif;
+        font-weight: 800;
+    }
+        &:hover {
+          background-color: $yellow1;
+          transform: scale(1.01);
+      }
+  }
+@media (max-width: 1024px){
+    .Highlight {
+         border-radius: 40px;
+         padding: 15px 25px;
+         width: 173px;
+         height: 58px;
+         span {
+             padding-left: 10px;
+         }
+     }
+    .MiniHighlight {
+         padding: 3px 7px;
+         font-size: 10px;
+         border-radius: 20px;
+     }
+}
+@media (max-width: 768px){
+    .Highlight {
+        border-radius: 30px;
+        padding: 10px 20px;
+        width: 150px;
+        height: 45px;
+        span {
+            padding-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .Highlight {
+     border-radius: 20px;
+     padding: 8px 18px;
+     width: 120px;
+     height: 35px;
+     font-size: 14px;
+     margin-bottom: 1rem;
+     span {
+         padding-left: 8px;
+     }
+    }    
+    .MiniHighlight {
+        text-decoration: none;
+        padding: 3px 7px;
+        font-size: 9px;
+        border-radius: 20px;
+    }
+}

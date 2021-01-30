@@ -1,0 +1,108 @@
+.NewArticleForm {
+    margin-bottom: 25rem;
+    h3 {
+        font-weight: bold;
+        font-size: 2.375rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    form {
+        padding: 3rem 0;
+        border-radius: 15px;
+        border: 1px solid $yellow1;
+        .FormControl {
+            width: 75%;
+            margin: auto;
+            margin-bottom: 23px;
+            img {
+                width: 100%;
+                height: 300px;
+                border-radius: 6px;
+            }
+            .UploadImage {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 82px;
+                width: 100%;
+                background: rgba(255, 213, 64, 0.1);
+                border: 2px dashed rgba(255, 213, 64, 0.6);
+                border-radius: 10px;
+                outline: none;
+                &:hover, &:focus {
+                    background: rgba(255, 213, 64, 0.15);
+                    i {
+                        animation: shakeUp 0.5s alternate;
+                    }
+                }
+                i {
+                    color: $yellow2;
+                    margin-right: 5px;
+                }
+            }
+            label {
+                font-weight: 500;
+                font-size: 0.875rem;
+                color: rgba($black2, 0.4);
+                width: 100%;
+                i {
+                    color: $red;
+                    font-weight: 500;
+                    font-size: 0.75rem;
+                }
+            }
+            .input {
+                width: 100%;
+                background: rgba($black2, 0.05);
+                border-radius: 10px;
+                outline: none !important;
+                height: 50px;
+                border: 1px solid transparent;
+                padding-left: 25px;
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: rgba($black2, 0.6);
+                }
+                &:hover, &:focus-within, &:active, &.active, &:focus {
+                    background: $white;
+                    border: 1px solid rgba(255, 139, 95, 0.5);
+                    border-radius: 10px;
+                }
+            }
+            textarea {
+                @extend .input;
+                height: 254px;
+            }
+        }
+        .FormButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                font-family: 'Raleway';
+                font-weight: bold;
+                font-size: 1.125rem;
+                color: $black1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 30px;
+                width: 222px;
+                height: 58px;
+                background: $yellow;
+                border-radius: 60px;
+                border: none;
+                outline: none;
+                i {
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                    margin-left: 4px;
+                }
+                &:hover, &:active, &:focus {
+                    background: $yellow1;
+                }
+            }
+        }
+    }
+}

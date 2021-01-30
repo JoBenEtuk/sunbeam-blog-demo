@@ -1,0 +1,36 @@
+.input{
+    display: flex;
+    justify-content: space-between;
+    border:2px solid #BDBDBD;
+    border-radius: 40px;
+    width: 579px;
+    height:55px;
+    padding:4px 15px;
+    z-index: 1;
+}
+.search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+}
+
+.center-input-help{
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    width: 56%;
+    z-index: 1;
+}
+
+.center-input{
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+

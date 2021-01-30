@@ -1,0 +1,17 @@
+.HomeDetails {
+    width: 57%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .HomeDetails {
+       width: 75%;
+    }
+}
+@media (max-width: 768px) {
+    .HomeDetails {
+        width: 80%;
+        padding-top: 2em;
+    }
+}
