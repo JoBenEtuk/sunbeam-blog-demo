@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { data } from "../new-article/NewArticleForm";
 
 function HomeBody() {
-    const [blogPost, setBlogPost] = useState(data);
     return (
         <section className='HomeBody'>
             <div className='HomeBodyMain'>
                 {
-                    blogPost.map((article, index) => (
+                    data.map((article, index) => (
                         <Link key={index} to={article.head && `/home/${((article.head).toLowerCase().trim().split(/\W+/).join('-').substring(0, 12))}`}>
                             <div className='Article'>
                                 <img src={article.images} alt='ref' />
