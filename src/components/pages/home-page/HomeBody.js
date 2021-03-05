@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 import { data } from "../new-article/NewArticleForm";
 
 function HomeBody() {
+    const dataMap = data;
     return (
         <section className='HomeBody'>
             <div className='HomeBodyMain'>
                 {
-                    data.map((article, index) => (
+                    dataMap.map((article, index) => (
                         <Link key={index} to={article.head && `/home/${((article.head).toLowerCase().trim().split(/\W+/).join('-').substring(0, 12))}`}>
                             <div className='Article'>
                                 <img src={article.images} alt='ref' />
