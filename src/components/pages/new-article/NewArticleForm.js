@@ -20,15 +20,23 @@ export const NewArticleForm = () => {
         }
     };
 
+    //Handle Change
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setForm({ ...form, [name]: value });
+    };
+
     //Handle Submit & localstorage
     const handleSubmit = event => {
         event.preventDefault()
         const formData = new FormData();
         formData.append("file", selectedFile);
-        data.push(form)
-        // data.pop()
+        data.unshift(form)
+        // data.shift()
         console.log(data)
         localStorage.setItem('article', JSON.stringify(data));
+        setForm({ head: '', date: '', highlight: '', body: '', images: '' });
     }
     localStorage.setItem('article', JSON.stringify(items));
 
@@ -50,45 +58,56 @@ export const NewArticleForm = () => {
                     </label>
                 </div>
                 <div className='FormControl'>
-                    <label>Article Title <i className='icon-asterisk'></i> </label>
+                    <label htmlFor='head'>Article Title <i className='icon-asterisk'></i> </label>
                     <input
-                        // required
+                        required
                         className='input'
                         type='text'
+                        name='head'
+                        id='head'
                         value={form.head}
                         placeholder='Input article title'
-                        onChange={e => setForm({ ...form, head: e.target.value })}></input>
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className='FormControl'>
-                    <label>Article Tag <i className='icon-asterisk'></i> </label>
+                    <label htmlFor='highlight'>Article Tag <i className='icon-asterisk'></i> </label>
                     <input
-                        // required
+                        required
                         className='input'
+                        name='highlight'
+                        id='highlight'
                         type='text'
                         maxLength='11'
                         value={form.highlight}
                         placeholder='Enter tag e.g UX Writing'
-                        onChange={e => setForm({ ...form, highlight: e.target.value })}></input>
+                        onChange={handleChange}></input>
                 </div>
                 <div className='FormControl'>
-                    <label>Date <i className='icon-asterisk'></i> </label>
+                    <label htmlFor='date'>Date <i className='icon-asterisk'></i> </label>
                     <input
-                        // required
+                        required
                         className='input'
                         type='text'
+                        name='date'
+                        id='date'
                         value={form.date}
                         placeholder='Date Month, Year. e.g 1st January, 2001'
-                        onChange={e => setForm({ ...form, date: e.target.value })}
+                        onChange={handleChange}
                     ></input>
                 </div>
                 <div className='FormControl'>
-                    <label>Content <i className='icon-asterisk'></i></label>
-                    <textarea name="" id="" rows="10"
+                    <label htmlFor='body'>Content <i className='icon-asterisk'></i></label>
+                    <textarea
+                        name="body"
+                        id="body"
+                        rows="10"
                         className='input'
                         type='text'
+                        required
                         value={form.body}
                         placeholder='Awesome blog article'
-                        onChange={e => setForm({ ...form, body: e.target.value })}></textarea>
+                        onChange={handleChange}></textarea>
                 </div>
                 <div className='FormButton'>
                     <button type="submit">Save & Publish <i className='icon-arrow-right-line'></i> </button>
