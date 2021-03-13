@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { data } from '../new-article/NewArticleForm'
+import { ItemContext } from '../../../App';
 
 function HomeBody() {
-    const dataContent = data;
+    const data = useContext(ItemContext);
     return (
         <section className='HomeBody'>
             <div className='HomeBodyMain'>
                 {
-                    dataContent.map((article, index) => (
+                    data.map((article, index) => (
                         <Link key={index} to={article.head && `/home/${((article.head).toLowerCase().trim().split(/\W+/).join('-').substring(0, 12))}`}>
                             <div className='Article'>
                                 <img src={article.images} alt='ref' />
