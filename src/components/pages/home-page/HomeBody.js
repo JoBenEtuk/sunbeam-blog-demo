@@ -1,13 +1,14 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { data } from "../new-article/NewArticleForm";
+import { data } from '../new-article/NewArticleForm'
 
 function HomeBody() {
-    const dataMap = data;
+    const dataContent = data;
     return (
         <section className='HomeBody'>
             <div className='HomeBodyMain'>
                 {
-                    dataMap.map((article, index) => (
+                    dataContent.map((article, index) => (
                         <Link key={index} to={article.head && `/home/${((article.head).toLowerCase().trim().split(/\W+/).join('-').substring(0, 12))}`}>
                             <div className='Article'>
                                 <img src={article.images} alt='ref' />

@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { items } from '../article';
+import React, { useState, useContext, useEffect } from 'react'
+import { ItemContext } from '../../../App';
 
 export const data = JSON.parse(localStorage.getItem('article'));
 export const NewArticleForm = () => {
     const [form, setForm] = useState({ head: '', date: '', highlight: '', body: '', images: '' })
     const [selectedFile, setSelectedFile] = useState(null);
     const [imgData, setImgData] = useState(null);
+    const items = useContext(ItemContext);
 
     const onChangePicture = e => {
         if (e.target.files[0]) {
@@ -16,29 +17,28 @@ export const NewArticleForm = () => {
             });
             reader.readAsDataURL(e.target.files[0]);
             setForm({ ...form, images: e.target.value })
-            console.log(form)
         }
     };
-
     //Handle Change
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         setForm({ ...form, [name]: value });
     };
-
     //Handle Submit & localstorage
     const handleSubmit = event => {
         event.preventDefault()
         const formData = new FormData();
         formData.append("file", selectedFile);
-        data.unshift(form)
-        // data.shift()
-        console.log(data)
-        localStorage.setItem('article', JSON.stringify(data));
-        setForm({ head: '', date: '', highlight: '', body: '', images: '' });
+        items.push(form)
+        console.log(items)
+        localStorage.setItem('article', JSON.stringify(items));
     }
-    localStorage.setItem('article', JSON.stringify(items));
+
+    useEffect(() => {
+        localStorage.getItem('articleItem');
+        localStorage.setItem('articleItem', JSON.stringify(items));
+    }, [items])
 
     return (
         <div className='NewArticleForm'>
