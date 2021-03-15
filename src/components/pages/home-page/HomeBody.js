@@ -34,7 +34,7 @@ function HomeBody() {
                 }
             </div>
             <div className='LinkMore'>
-                <a href='/'><span>Load More</span> <i className='icon-arrow-right-line'></i></a>
+                <Link to='/'><span>Load More</span> <i className='icon-arrow-right-line'></i></Link>
             </div>
         </section>
     )
