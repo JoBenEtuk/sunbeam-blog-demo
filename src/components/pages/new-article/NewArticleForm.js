@@ -1,12 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
 import { ItemContext } from '../../../App';
 
-export const data = JSON.parse(localStorage.getItem('article'));
 export const NewArticleForm = () => {
+    const items = useContext(ItemContext);
     const [form, setForm] = useState({ head: '', date: '', highlight: '', body: '', images: '' })
     const [selectedFile, setSelectedFile] = useState(null);
     const [imgData, setImgData] = useState(null);
-    const items = useContext(ItemContext);
 
     const onChangePicture = e => {
         if (e.target.files[0]) {

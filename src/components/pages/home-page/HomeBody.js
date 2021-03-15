@@ -1,14 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ItemContext } from '../../../App';
 
 function HomeBody() {
-    const data = useContext(ItemContext);
+    const items = useContext(ItemContext);
+    const [newArticle, setNewArticle] = useState([]);
+    useEffect(() => {
+        setNewArticle(items)
+    }, [items])
     return (
         <section className='HomeBody'>
             <div className='HomeBodyMain'>
                 {
-                    data.map((article, index) => (
+                    newArticle.map((article, index) => (
                         <Link key={index} to={article.head && `/home/${((article.head).toLowerCase().trim().split(/\W+/).join('-').substring(0, 12))}`}>
                             <div className='Article'>
                                 <img src={article.images} alt='ref' />
@@ -35,5 +39,4 @@ function HomeBody() {
         </section>
     )
 }
-
-export default HomeBody
+export default HomeBody;
